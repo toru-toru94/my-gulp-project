@@ -57,8 +57,14 @@ li {
   top: 33px;
   left: 10px;
 }
-.header__right--ham.ham-active span {
-  left: -15px;
+.header__right--ham.ham-active span:nth-child(1) {
+  left: 15px;
+}
+.header__right--ham.ham-active span:nth-child(2) {
+  left: 10px;
+}
+.header__right--ham.ham-active span:nth-child(3) {
+  left: 15px;
 }
 
 /* ナビゲーション */
