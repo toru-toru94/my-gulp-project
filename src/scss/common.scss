@@ -1,0 +1,143 @@
+body{
+  font-family: 'Noto Sans JP',Noto Sans;
+  background-color: antiquewhite;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+li{
+  list-style: none;
+}
+
+@mixin nav-label{
+  display: block;
+  width: 20px;
+  height: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: #333 1px solid;
+}
+
+/* ヘッダー */
+
+.header{
+  width: min(100% - 5rem);
+  min-width: 375px;
+  margin-inline:auto;
+  padding: 20px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__left{
+  }
+  &__right{
+    align-items: center;
+    display: flex;
+
+
+    /* ハンバーガー */
+    &--ham{
+      margin-left: 50px;
+      width: 50px;
+      height: 50px;
+      border: #333 2px solid;
+      border-radius: 10px;
+      position: relative;
+      & span{
+        position: absolute;
+        display: block;
+        background-color: #333;
+        width: 50%;
+        height: 3px;
+        border-radius: 10px;
+        transition: all ease .4s;
+        &:nth-child(1){
+          top:13px;
+          left: 10px;
+        }
+        &:nth-child(2){
+          top: 23px;
+          left: 15px;
+        }
+        &:nth-child(3){
+          top: 33px;
+          left: 10px;
+        }
+      }
+      &.ham-active {
+        & span{
+              left: -15px;
+            }
+        }
+      }
+    }
+  }
+
+
+
+/* ナビゲーション */
+.nav{
+  background-color: #fff;
+  border-top: #333 2px solid;
+  border-left: #333 2px solid;
+  border-right: #333 6px solid;
+  border-bottom: #333 6px solid;
+  border-radius: 10px;
+  width: 320px;
+  float: right;
+  margin-right: 40px;
+  transform: translateX(calc(100% + 40px));
+  transition: all ease .4s;
+  &.nav-active {
+    transform: translateX(0);
+    }
+  &__menu{
+    border-bottom: #333 1px solid;
+    padding: 20px;
+    &--link{
+      width: 100%;
+      padding: 10px;
+      &:hover{
+        background-color: #efefef;
+        border-radius: 5px;
+      }
+    }
+  }
+  &__category{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    &--link{
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      margin: 6px;
+      &:hover{
+        background-color: #efefef;
+        border-radius: 5px;
+      }
+    }
+    &--label1{
+      @include nav-label;
+      background-color:#B0DDB0;
+    }
+    &--label2{
+      @include nav-label;
+      background-color:#AEA8D2;
+    }
+    &--label3{
+      @include nav-label;
+      background-color: #A9CCCC;
+    }
+    &--label4{
+      @include nav-label;
+      background-color: #D29C9C;
+    }
+    &--label5{
+      @include nav-label;
+      background-color: #DBA77B;
+    }
+  }
+}

@@ -3,11 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gulp + BrowserSync</title>
-  <link rel="stylesheet" href="/src/css/style.css">
+  <title>HOUSE | TOP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/ress.css">
+  <link rel="stylesheet" href="/src/css/common.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+  <script src="/src/js/script.js" defer></script>
 </head>
 <body>
-  <h1>Hello, Gulp + BrowserSync!</h1>
-  <p>test</p>
+  <header class="header">
+    <div class="header__left"><h1 class="header__left--logo"><a href="/index.html">HOUSE</a></h1></div>
+
+    <div class="header__right">
+      <div class="header__right--search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
+      <button class="header__right--ham ham">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav class="header__nav nav nav-acitve">
+    <ul class="nav__menu">
+      <li class="nav__menu--link"><a href="">ホーム</a></li>
+      <li class="nav__menu--link"><a href="">すべての記事</a></li>
+      <li class="nav__menu--link"><a href="">お問い合わせ</a></li>
+    </ul>
+    <ul class="nav__category">
+      <li class="nav__category--link"><span class="nav__category--label1"></span><a href="">インテリア</a></li>
+      <li class="nav__category--link"><span class="nav__category--label2"></span><a href="">デザイン</a></li>
+      <li class="nav__category--link"><span class="nav__category--label3"></span><a href="">ライフスタイル</a></li>
+      <li class="nav__category--link"><span class="nav__category--label4"></span><a href="">カルチャー</a></li>
+      <li class="nav__category--link"><span class="nav__category--label5"></span><a href="">オフィス</a></li>
+    </ul>
+  </nav>
+  <main class="wrapper"></main>
+  <footer class="wrapper"></footer>
 </body>
 </html>
